@@ -1,0 +1,30 @@
+{
+  "name": "expresspractica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsisPMR/expressPractica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsisPMR/expressPractica/issues"
+  },
+  "homepage": "https://github.com/IsisPMR/expressPractica#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "parser": "^0.1.4"
+  }
+}
