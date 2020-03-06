@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
-import { User, UserSchema } from '../models/User';
+import { Credentials, CredentialsSchema } from '../models/Credentials';
 
 
 export default (req: Request, res: Response, next:NextFunction) => {
-    const user: User = req.body;
+    const credentials: Credentials = req.body;
 
-    const validation = UserSchema.validate(user);
+    const validation = CredentialsSchema.validate(credentials);
 
     if (validation.error){
         return res.status(400).json(validation.error.details);
