@@ -1,7 +1,8 @@
 //Solo importaciones de las rutas y el controller
 import express, { Application } from 'express';
 import bodyParser from "body-parser";
-import usersRouters from './routes/userRoutes'
+import usersRouters from './routes/userRoutes';
+import authRouters from './routes/authRoutes';
 
 const app: Application = express();
 
@@ -9,7 +10,10 @@ const app: Application = express();
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json());
 
-// user routes
+// User routes
 app.use('/users', usersRouters);
+
+// Auth routes
+app.use('/auth', authRouters);
 
 export default app;
