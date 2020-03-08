@@ -5,11 +5,10 @@ import deleteUsers from '../controllers/users/delete';
 import findUsers from '../controllers/users/find';
 import express, { Router } from 'express';
 import userValidationSchema from '../middlewares/users'
-import tokenValidator from "../middlewares/token";
 const router: Router = express.Router();
 
 //Listar usuarios
-router.get('/list', [tokenValidator, listUsers]);
+router.get('/list', listUsers);
 
 //Crear usuario
 router.post('/create', [userValidationSchema], createUsers);
